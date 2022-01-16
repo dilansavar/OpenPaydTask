@@ -1,0 +1,43 @@
+.photo-grid {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+}
+.card{
+  width: 400px;
+  margin: auto;
+}
+
+.headerContent{
+  display: inline-flex;
+  margin: auto;
+}
+
+:host{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap: 30px;
+  grid-template-areas: 
+  "header header"
+  "card image"
+}
+
+.headerSection{
+  /* grid-column: 1 / span 2 ;
+  grid-row: 1; */
+  grid-area:header;
+}
+
+.cardSection{
+  /* grid-column: 1;
+  grid-row: 2; */
+  grid-area: card;
+}
+
+.imageSection{
+  /* grid-column: 2;
+  grid-row: 2; */
+  grid-area:image;
+}
